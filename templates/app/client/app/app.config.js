@@ -11,5 +11,6 @@ export function routeConfig(<% if (filters.ngroute) { %>$routeProvider<% } if (f
   $urlRouterProvider
     .otherwise('/');<% } %>
 
-  $locationProvider.html5Mode(true);
+
+  $locationProvider.html5Mode({ enabled: true, requireBase: false });
 }
